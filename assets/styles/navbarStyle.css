@@ -43,7 +43,9 @@
     transition: all .5s;
     overflow: hidden;
 }
-
+.submenu p{
+    overflow: hidden;
+}
 .parent-menu-1:hover .submenu-1{
     height:100px !important;
 }

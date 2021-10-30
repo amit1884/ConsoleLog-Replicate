@@ -1,9 +1,12 @@
 .section-height
 {
-    height: 550px;
+    /* max-height: 550px; */
+    min-height: 400px;
 }
 .container{
     width:70vw;
+    position: relative;
+    overflow-y: hidden;
 }
 .d-flex{
     display: flex;
@@ -71,4 +74,17 @@
 }
 .pr-50{
     padding-right:50px ;
+}
+
+.text-tiny{
+    font-size: 12px;
+}
+.text-base{
+    font-size: 14px;
+}
+.text-regular{
+    font-size: 18px;
+}
+.blue-txt{
+    color: dodgerblue;
 }

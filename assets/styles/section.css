@@ -1,9 +1,197 @@
 .card-1{
-    width:30%;
-    height: 250px;
-    border: 1px solid;
+    width:33%;
+    height: 220px;
     display: flex;
     flex-direction: column;
     align-items:flex-start;
-    justify-content: space-around;
+    padding: 10px;
+}
+.card-1 img{
+    margin-bottom: 30px;
+    width:60px;
+    height:60px;
+    
+}
+.card-1 h3,.card-1 p{
+    margin-bottom: 10px;
+}
+.card-1 p{
+    font-size: 12px;
+    line-height: 1.5;
+}
+.container::before{
+    position: absolute;
+    content: '';
+    height:90%;
+    width:1px;
+    background-color:pink;
+    left:10px;
+    top:23px;
+    z-index: 10;
+}
+
+.team-img{
+    margin-bottom: 20px;
+    width:100% !important;
+    height: 290px !important;
+}
+
+.team,.sponsor,.twitter-feeds,.testimonials{
+    height:600px !important;
+}
+.testimonials{
+    background-color: #F8DFDB;
+}
+.sponsor .container{
+    position: relative;
+}
+.sponsor .container::before{
+    position: absolute;
+    content: '';
+    height:90%;
+    width:1px;
+    background-color:dodgerblue !important;
+    left:10px;
+    top:23px;
+    z-index: 10;
+}
+.card-2{
+    width:32%;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    padding: 10px;
+}
+.card-2 h3{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.card-2 p{
+    font-size: 13px;
+}
+.accounts{
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.accounts div{
+    margin-right: 10px;
+}
+.brands{
+    display: flex;
+    justify-content: center;
+    margin:50px auto;
+}
+.brands img{
+    width:150px;
+}
+.card-3{
+    width:32%;
+    background-color: #f5f8fd;
+    height:300px;
+    padding:20px;
+    position: relative;
+}
+.profile{
+    width:30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.profile img{
+    width:30px;
+    height: 30px;
+}
+.info p{
+    font-size: 12px;
+    color:#000;
+}
+.post p{
+    font-size: 13px;
+    margin-top:10px;
+    margin-bottom:10px;
+    color:#000;
+}
+.read-more{
+    font-size: 13px;
+    cursor: pointer;
+    color:#000
+}
+.read-more:hover #arrow{
+
+    margin-right:15px;
+    transition: .3s;
+}
+.card-3:hover{
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0.7) 50%,rgba(0,0,0,0.7) 50%) ,url("../images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.card-3:hover .info p{
+    color:#fff;
+}
+.card-3:hover .post h4{
+    color:#fff;
+}
+.card-3:hover .read-more{
+    color:#fff;
+}
+.card-3:hover .author-info p{
+    color:#fff;
+}
+#arrow{
+    font-size: 18px;
+    font-weight: 600;
+}
+.read-more:hover #arrow{
+    margin-left: 10px;
+    
+}
+.arrow-left{
+    width: 0;
+    height:0;
+    border-top:7px solid transparent;
+    border-bottom:7px solid transparent;
+    border-left:7px solid #fff;
+}
+.arrow-right{
+    width: 0;
+    height:0;
+    border-top:7px solid transparent;
+    border-bottom:7px solid transparent;
+    border-right:7px solid #fff;
+}
+
+.card-4{
+    width:50%;
+    height:300px;
+    padding:20px;
+    position: relative;
+}
+.card-4 .user-pic{
+    width:20%;
+    height:100%;
+}
+.user-pic img{
+    width:60px;
+    height:60px;
+}
+.testimonial-content{
+    width:80%;
+    
+}
+
+.testimonial-content .desc p{
+    line-height: 1.4;
+    font-size: 15px;
+    margin: auto 20px;
+}
+.author-name{
+    margin-top:20px
+}
+.author-name p{
+    font-size: 13px;
+    margin: auto 20px;
 }
