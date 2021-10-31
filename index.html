@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Console.log(Replicate)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.6.1/font/bootstrap-icons.min.css"  referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/styles/common.css" />
     <link rel="stylesheet" href="assets/styles/navbarStyle.css" />
     <link rel="stylesheet" href="assets/styles/banner.css" />
     <link rel="stylesheet" href="assets/styles/section.css" />
     <link rel="stylesheet" href="assets/styles/footer.css" />
+    <link rel="stylesheet" href="assets/styles/sidebar.css" />
   </head>
   <body>
     <!-- Navbar Starts-->
@@ -24,46 +26,76 @@
           <li class="nav-items parent-menu-1">
             <span>Products</span>
             <div class="submenu submenu-1">
-              <p>link-1</p>
-              <p>Link-2</p>
+              <p>Market Place</p>
+              <p>Return</p>
+              <p>Contact Us</p>
             </div>
           </li>
           <li class="nav-items parent-menu-2">
             <span>Innovation Cell</span>
             <div class="submenu submenu-2">
-              <p>link-3</p>
-              <p>Link-4</p>
+              <p>Current Innovations</p>
+              <p>Award Winning Design</p>
             </div>
           </li>
           <li class="nav-items parent-menu-3">
             <span>Blog</span>
             <div class="submenu submenu-3">
-              <p>link-5</p>
-              <p>Link-6</p>
+              <p>Blog Standard</p>
+              <p>Blog grid</p>
+              <p>Blog Post</p>
             </div>
           </li>
         </ul>
       </div>
       <div class="nav-right-links">
         <ul>
-          <li class="nav-items">search</li>
-          <li class="nav-items">cart</li>
+          <li class="nav-items"><i class="bi bi-search"></i></li>
+          <li class="nav-items"><i class="bi bi-cart4"></i></li>
           <li class="nav-items parent-menu-4">
             <span>Eng</span>
             <div class="submenu submenu-4">
-              <p>Hin</p>
-              <p>Fra</p>
+              <p>ARB</p>
+              <p>FRA</p>
             </div>
           </li>
-          <li>
-            
-          </li>
+          
         </ul>
       </div>
-      <div class="menu-icon"></div>
+      <div class="menu-icon" id="open-btn" onclick="showSidebar()">
+        <div class="box-cont d-flex">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="box-cont d-flex">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="box-cont d-flex">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
     </section>
     <!-- Navbar Ends -->
-
+    <!-- Sidebar Starts-->
+    <div class="sidebar-container p-10" id="right-sidebar">
+      <div class="sidebar-header d-flex ">
+        <button class="close-btn" id=""onclick="hideSidebar()">X</button>
+      </div>
+      <div class="sidebar-body">
+        <ul>
+          <li>Facebook</li>
+          <li>Instagram</li>
+          <li>Behance</li>
+          <li>Dribble</li>
+          <li>Email</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Sidebar Ends -->
 
     <!-- Banner Carousel Starts -->
     <section class="section-height banner-container">
@@ -72,18 +104,36 @@
         <td width="600" style="background-color:#ffffff">
         <div class="carousel slide responsive" style="overflow:hidden;display:none;max-height:0px;">
         <div class="car-cont" style="position:relative;width:500px;height:320px;">
-        <div class="slides"><img src="assets/images/avatar1.jpg"></div>
-        <div class="slides"><img src="assets/images/avatar2.jpg"></div>
-        <div class="slides"><img src="assets/images/avatar3.jpg"></div>
+        <div class="slides">
+          <div class="slide-overlay">
+            <div class="title-1">Some Tech</div>
+            <div class="title-2">Company</div>
+            <div class="read-more t-2">EXPLORE PROJECTS &nbsp;&nbsp;<span>&#8594;</span></div>
+          </div>
+          <img src="assets/images/avatar1.jpg">
+        </div>
+        <div class="slides">
+          <div class="slide-overlay">
+            <div class="title-1 t-3">Some Tech</div>
+            <div class="title-2 t-4">Company</div>
+            <div class="read-more t-4">EXPLORE PROJECTS &nbsp;&nbsp;<span>&#8594;</span></div>
+          </div>
+          <img src="assets/images/avatar2.jpg">
+        </div>
+        <div class="slides">
+          <div class="slide-overlay">
+            <div class="title-1 t-5">Some Tech</div>
+            <div class="title-2 t-6">Company</div>
+            <div class="read-more">EXPLORE PROJECTS &nbsp;&nbsp;<span>&#8594;</span></div>
+          </div>
+          <img src="assets/images/avatar3.jpg">
+        </div>
         </div>
         </div>
         </td><td>&nbsp;</td>
         </tr></table>
     </section>
     <!-- Banner Carousel Ends -->
-
-
-
     <!-- Section 1 Starts -->
     <section class="section-height d-flex justify-content-center pt-50">
       <div class="container d-flex justify-content-between flex-wrap">
@@ -99,12 +149,12 @@
           </div>
           </div>
           <div style="width:100%;height:auto;" class="d-flex justify-content-around flex-wrap">
-            <div class="card-1">
+            <div class="card-1 scroll-element js-scroll fade-in">
               <img src="assets/images/notes.PNG" alt=""/>
               <h3>Market Research</h3>
               <p>Lorem Ipsum is simply text the printing and <br/>typesetting statndard industry.</p>
             </div>
-            <div class="card-1">
+            <div class="card-1 scroll-element js-scroll fade-in">
               <img src="assets/images/diamond.PNG" alt=""/>
               <h3>Wireframe/Sketch</h3>
               <p>Lorem Ipsum is simply text the printing and <br/>typesetting statndard industry.</p>
@@ -124,14 +174,33 @@
 <section class="section-height d-flex justify-content-center pt-50 sponsor" style="background-color:#F8DFDB;">
   <div class="container d-flex justify-content-between flex-wrap">
     <div class="section-left"><span class="blue-txt"><b>02</b></span>&nbsp;&nbsp;<span>B&#8745;B</span></div>
-    <div style="height:max-content;"class="d-flex  flex-wrap section-right">
-      <div style="height:auto; margin-bottom: 30px;" class="equal-div">
+    <div style="height:max-content;"class="d-flex flex-direction flex-wrap section-right ">
+      <div style="height:auto; margin-bottom: 30px;" class="section-2-heading">
         <h2>Latest Projects</h2>
       </div>
-      <div style="height:auto;" class="d-flex justify-content-around flex-wrap">
-         
+      <div style="height:auto;" class="d-flex justify-content-around flex-direction flex-wrap">
+         <div class="image-slider-container d-flex ">
+            <div class="image-slides">
+              <img src="assets/images/Works1.png"alt=""/>
+            </div>
+            <div class="image-slides">
+              <img src="assets/images/Works2.png"alt=""/>
+            </div>
+            <div class="image-slides">
+              <img src="assets/images/Works3.png"alt=""/>
+            </div> 
+            <div class="image-slides">
+              <img src="assets/images/Works1.png"alt=""/>
+            </div> 
+            <div class="image-slides">
+              <img src="assets/images/Works2.png"alt=""/>
+            </div>
+         </div>
+         <div class="controls">
+          <div class="arrow-right"></div>
+          <div class="arrow-left" ></div>
+        </div>
       </div>
-      
     </div>
   </div>
 </section>
@@ -291,7 +360,7 @@
               </h4>
             </div>
             <div class="read-more">
-              <p>Read more &nbsp;<span id="arrow">&#8594</span></p>
+              <p>Read more &nbsp;<span id="arrow">&#8594;</span></p>
             </div>
           </div>
       </div>
