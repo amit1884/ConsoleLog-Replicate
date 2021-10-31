@@ -90,3 +90,59 @@
 }
 
 
+.preloader{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hide-loader{
+    display: none;
+}
+
+.ball{
+    width:40px;
+    height:40px;
+    background-color: brown;
+    border-radius: 50%;
+   
+    animation: squeeze 1s ease-in-out infinite ;
+}
+.main-loader{
+    animation: spinner 1s linear infinite ;
+}
+.c-1{
+    background-color: red;
+}
+.c-2{
+    background-color: yellow;
+}
+.c-3{
+    background-color: blue;
+}
+.c-4{
+    background-color: green;
+}
+@keyframes spinner {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes squeeze {
+    0%{
+        margin:20px;
+    }
+    100%{
+        margin:4px;
+    }
+}

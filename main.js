@@ -44,3 +44,11 @@ function toggleBlogMenu(){
   var element = document.getElementById("sm-1");
   element.classList.add("sub-menu-1")
 }
+
+// Preloader 
+
+window.addEventListener('load',function(){
+  
+    document.querySelector('.preloader').classList.add("hide-loader") 
+   
+});
