@@ -11,4 +11,4 @@ function showSidebar() {
   }
 
 
-  // handle carousel
+ 
