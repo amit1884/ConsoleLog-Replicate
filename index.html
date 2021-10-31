@@ -80,7 +80,58 @@
       </div>
     </section>
     <!-- Navbar Ends -->
-    <!-- Sidebar Starts-->
+    <!-- left(Mobile) Sidebar Starts-->
+    <div class="left-sidebar-container p-10 show-left-sidebar" id="left-sidebar">
+      <div class="sidebar-header d-flex ">
+        <button class="close-btn left-btn rot-btn" id="l-btn"  onclick="showLeftSidebar()">
+          <i class="bi bi-arrow-right-circle"></i>
+        </button>
+      </div>
+      <div class="sidebar-body left-body">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li id="pro" onclick="toggleProMenu()">Products
+            <ul class="sub-menu sub-menu-1" id="sm-1">
+              <li>Market Place</li>
+              <li>Return</li>
+              <li>Contact Us</li>
+            </ul>
+          </li>
+          <li id="ic" onclick="toggleICMenu()">
+            Innovation Cells
+            <ul class="sub-menu sub-menu-2" id="sm-2">
+              <li>Current Innovations</li>
+              <li>Award Winning innovation</li>
+            </ul>
+          </li>
+          <li id="blog" onclick="toggleBlogMenu()">Blog
+            <ul class="sub-menu sub-menu-3" id="sm-3">
+              <li>Blog Standard</li>
+              <li>Blog Grid</li>
+              <li>Blog Post</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="opt ">
+          <div class="nav-icons"><i class="bi bi-cart4"></i>&nbsp;&nbsp;Cart</div>
+          <br/><br/>
+          <div class="nav-icons">
+            <i class="bi bi-search"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" id="search-field" />
+          </div><br/>
+        </div>
+        <div>
+          <li class="d-flex justify-content-around lang">
+            <div>ENG</div>
+            <div>ARB</div>
+            <div>FRA</div>
+          </li>
+        </div>
+      </div>
+    </div>
+    <!-- Left(Mobile) Sidebar Ends -->
+    <!-- Right Sidebar Starts-->
     <div class="sidebar-container p-10" id="right-sidebar">
       <div class="sidebar-header d-flex ">
         <button class="close-btn" id=""onclick="hideSidebar()">X</button>
@@ -95,7 +146,7 @@
         </ul>
       </div>
     </div>
-    <!-- Sidebar Ends -->
+    <!-- Right Sidebar Ends -->
 
     <!-- Banner Carousel Starts -->
     <section class="section-height banner-container">

@@ -7,6 +7,7 @@
     height:100%;
     z-index: 999;
     transition: .7s;
+    overflow: hidden;
 }
 .sidebar-header{
     color:#fff;
@@ -15,13 +16,14 @@
     justify-content: flex-end;
 }
 .sidebar-body{
-    height: 80%;
+    height: 100%;
     margin-top:20px;
     margin-left: 60px;
     color:#fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden !important;
 }
 .sidebar-body ul li{
     margin:20px 5px;
@@ -50,4 +52,113 @@
 .close-btn:hover{
     transform: rotate(180deg);
     transition: 1s;
+}
+
+#left-sidebar{
+    display: none;
+}
+.left-sidebar-container{
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,0.9);
+    width:350px;
+    height:100%;
+    z-index: 999;
+    transition: .7s;
+    }
+    .show-left-sidebar{
+        left:0;
+        transition: .7s;
+    }
+    .left-body li{
+        font-size: 20px !important;
+        
+    }
+    #pro,#ic,#blog{
+        position: relative;
+        overflow: hidden;
+    }
+    #pro::before{
+        content: '\25be';
+        position: absolute;
+        right:20px;
+        top:0;
+        color:dodgerblue;
+    }
+    #pro::before{
+        content: '\25be';
+        position: absolute;
+        right:20px;
+        top:0;
+        color:dodgerblue;
+    }
+    #pro::before{
+        content: '\25be';
+        position: absolute;
+        right:20px;
+        top:0;
+        color:dodgerblue;
+    }
+    #ic::before{
+        content: '\25be';
+        position: absolute;
+        right:20px;
+        top:0;
+        color:dodgerblue;
+    }
+    #blog::before{
+        content: '\25be';
+        position: absolute;
+        right:20px;
+        top:0;
+        color:dodgerblue;
+    }
+    .lang div{
+        margin-top:30px;
+        font-size: 14px;
+    }
+    .nav-icons{
+        color:dodgerblue;
+    }
+    #search-field{
+        background-color: transparent;
+        border:none;
+        outline: none;
+        border-bottom: 1px solid #ffff;
+        color:#fff;
+        width:200px;
+    }
+    .left-body{
+        margin-left:20px !important;
+        position: relative;
+        overflow: hidden;
+    }
+    .left-btn{
+        margin-right:0 !important;
+        font-size: 18px !important;
+        position: absolute;
+        right:10px;
+        top:45%;
+        z-index:20;
+    }
+    .left-btn:hover{
+        transform: none;
+    }
+    .sub-menu li{
+        font-size: 14px !important;
+        text-shadow: none;
+    }
+    .sub-menu-1,.sub-menu-2,.sub-menu-3{
+        display: none;
+    }
+@media(max-width:991px){
+    #left-sidebar{
+        display: block;
+        
+    }
+    .show-left-sidebar{
+        transform: translateX(-310px);
+        transition: .7s;
+    }
 }
