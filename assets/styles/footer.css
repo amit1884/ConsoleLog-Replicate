@@ -36,3 +36,17 @@ margin: 10px auto;
 .bottom-area div{
     font-size: 14px;;
 }
+@media(max-width:991px){
+    .footer-container{
+        margin:10px 40px;
+    }
+    .desc{
+        font-size: 12px;
+    }
+    .social-icons div{
+        margin-right:5px;
+    }
+    .footer-menu h4{
+        font-size: 13px;
+    }
+}

@@ -3,15 +3,86 @@
     display: flex;
     justify-content: center;
 }
-.slide-container{
-    width:calc(100% - 500px);
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    /* border: 1px solid; */
-}
-.slides{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
+
+.carousel{
+    display:block !important;
+    max-height:none !important;
+    position:relative;
+  }
+
+  #MessageViewBody .carousel,
+  body.MsgBody .carousel{
+    display:none !important;
+  }
+
+  .carousel .slides{
+    width:100%;
+    display:block;
+    overflow:hidden;
+  }  
+
+  .carousel img{
+    display:block!important;
+    width:100% !important;
+    height:auto !important;
+  }
+
+  .carousel.responsive{
+    width:100% !important;
+  }
+
+  .carousel.responsive .car-cont{
+    width:100% !important;
+    height:auto !important;
+  }  
+
+
+  .carousel.slide .slides{
+    position:absolute;
+    top:0px;
+    left:0px; 
+    opacity:1;   
+    width:800px;
+    height:500px;
+    -webkit-animation: slide-anim 9s linear infinite;    
+  }
+
+  .carousel.slide .slides:nth-child(1){
+    position:relative;
+    -webkit-animation-delay: -10s;    
+  }
+  .carousel.slide .slides:nth-child(2){
+    -webkit-animation-delay: -7s;    
+  }
+  .carousel.slide .slides:nth-child(3){
+    -webkit-animation-delay: -4s;    
+  }
+  @-webkit-keyframes slide-anim
+  {
+      /* start slide in */
+      0% {
+        margin-left:100%;
+      }
+      /* end slide in */
+      5%{
+        margin-left:0%;
+      }
+      /* start slide out */
+      33.3333%{
+        margin-left:0%;
+      }
+      /* end slide out */
+      38.3333%{
+        margin-left:-100%;
+      }
+      100%{
+        margin-left:-100%;
+      }
+  }
+
+
+  @media(max-width:991px){
+    .carousel.slide .slides{
+        height:400px;
+    }
+  }

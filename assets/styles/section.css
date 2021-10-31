@@ -1,3 +1,28 @@
+.section-left{
+    width:25%;
+}
+.section-right{
+    width:75%;
+}
+.equal-div{
+    width:50%;
+}
+@media (max-width:991px){
+    .section-left{
+        width:20%;
+        display: none;
+    }
+    .section-right{
+        width:100%;
+    }
+    .equal-div h2{
+        font-size: 15px;
+    }
+    .container::before{
+        display: none;
+    }
+}
+
 .card-1{
     width:33%;
     height: 220px;
@@ -19,6 +44,7 @@
     font-size: 12px;
     line-height: 1.5;
 }
+
 .container::before{
     position: absolute;
     content: '';
@@ -37,8 +63,10 @@
 }
 
 .team,.sponsor,.twitter-feeds,.testimonials{
+    padding-top:90px;
     height:600px !important;
 }
+
 .testimonials{
     background-color: #F8DFDB;
 }
@@ -55,25 +83,46 @@
     top:23px;
     z-index: 10;
 }
+.testimonials .container::before{
+    position: absolute;
+    content: '';
+    height:90%;
+    width:1px;
+    background-color:dodgerblue !important;
+    left:10px;
+    top:23px;
+    z-index: 10;
+}
 .card-2{
-    width:32%;
+    width:33%;
     height: 420px;
     display: flex;
     flex-direction: column;
     align-items:flex-start;
     padding: 10px;
+    overflow: hidden;
+    position: relative;
 }
+.card-2:hover{
+    transform: rotateY(360deg);
+    transition: 3s;
+    cursor: pointer;
+}
+
 .card-2 h3{
     font-size: 14px;
     margin-bottom: 8px;
+    margin-left:10px;
 }
 .card-2 p{
     font-size: 13px;
+    margin-left:10px;
 }
 .accounts{
     font-size: 14px;
     font-weight: 600;
     margin-top: 20px;
+    margin-left:10px;
 }
 .accounts div{
     margin-right: 10px;
@@ -194,4 +243,30 @@
 .author-name p{
     font-size: 13px;
     margin: auto 20px;
+}
+.nav-btns{
+    width:10%;
+    height:40px !important;
+    margin-left:50px;
+}
+@media(max-width:991px){
+    .card-1,.card-2,.card-3,.card-4{
+        width:100%;
+        margin-bottom: 10px;;
+    }
+    .team,.sponsor,.twitter-feeds,.testimonials{
+        padding-top:50px;
+        height:auto !important;
+    }
+    .brands img{
+        width:60px;
+    }
+    .card-4{
+        height: auto;
+    }
+    .nav-btns{
+        width:70px;
+        height:40px !important;
+        margin-left:50px;
+    }
 }
