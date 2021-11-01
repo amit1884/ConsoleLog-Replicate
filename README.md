@@ -2,3 +2,4 @@
 
 1. A single page website conatining some cool sliders
 2. Fully Responsive ,supports both desktop and mobile view.
+3. 3. Some images from missing so ,used other images.
